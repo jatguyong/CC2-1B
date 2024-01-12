@@ -1,0 +1,51 @@
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        const double POUNDS_TO_KG = 0.45359237;
+        Console.Write("Weight in Pounds (lbs): ");
+        double pounds = double.Parse(Console.ReadLine());
+        double converted_pounds = pounds * POUNDS_TO_KG;
+        Console.WriteLine("Weight converted to Kilograms (kg): " + Math.Round(converted_pounds, 2) + "kg");
+        
+        Console.WriteLine("=============================================================");
+        
+        const double LENGTH_TO_MILES = 1.609344;
+        Console.Write("Length in Miles (mi): ");
+        double length = double.Parse(Console.ReadLine());
+        double converted_length = length * LENGTH_TO_MILES;
+        Console.WriteLine("Length in Kilometers (km): " + Math.Round(converted_length, 2) + "km");
+        
+        Console.WriteLine("=============================================================");
+        
+        Console.Write("Temperature in Fahrenheit (F): ");
+        double fahrenheit = double.Parse(Console.ReadLine());
+        double converted_fahrenheit = ((fahrenheit-32) * 5)/9;
+        Console.WriteLine("Temperature in Celsius (C): " + Math.Round(converted_fahrenheit, 2) + " Celsius");
+        
+        Console.WriteLine("=============================================================");
+        
+        int average_of_students = 0;
+        
+        for (int i=1; i<11; i++){
+            Console.Write("Age of Student " + i + ": ");
+            int student = Convert.ToInt32(Console.ReadLine());
+            //the Console.ReadLine() returns a string so it must be converted to an int
+            average_of_students += student;
+        }
+        
+        Console.WriteLine("The average age of the students is: " + average_of_students/10);
+            
+        Console.WriteLine("=============================================================");
+        
+        string[] characters = {"Xie Lian", "Hanguang-Jun", "Yiling Patriarch", "Hua Cheng", "Luo Binghe"};
+        
+        string ability = "spiritual blast";
+        string equipment = "Chenqing";
+        string item = "Yin Tiger Tally";
+        
+        string story = characters[0] + ", the exiled heaven official and former prince of XianLe, encountered " + characters[1] + ", a peculiar cultivator searching for someone dear to him. That person turned out to be the now-villain, " + characters[2] + ", whose arrival had disrupted the celestial balance as he soared with his spirit-calling flute, " + equipment + ". Together, they aimed to uncover the truth behind the Patriarch's change in attitude. In a climactic battle, " + character[0] + " was forced to use his hidden power, the " + ability + " but was gravely wounded by malevolent spirits " + character[3] + " the Ghost King, joined to avenge his beloved friend and revealed that the " + characters[2] + " was controlled by the " + item + ". After vindicating the " + characters[2] + ", they destroyed the tally…or so they thought. As the battle ended, " + characters[4] + ", a disciple from Cang Qiong Mountain, collected the item and soon realized it wasn’t wholly destroyed. Pondering its fate, he chose to keep it for now.";
+    }
+}
